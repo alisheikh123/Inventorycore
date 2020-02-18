@@ -1,0 +1,54 @@
+﻿@model Inventory_Management_Systems.Models.tblVoucher
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblVoucher</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.voucherCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.voucherCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.voucherDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.voucherDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.userId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.userId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.createdDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.createdDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.voucher_Type)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.voucher_Type)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblInvoice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblInvoice.CompanyName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.voucherId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

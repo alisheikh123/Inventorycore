@@ -1,0 +1,72 @@
+﻿@model Inventory_Management_Systems.Models.tblInvoice
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblInvoice</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.invoice_Code)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.invoice_Code)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Invoice_type)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Invoice_type)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.payment_Mode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.payment_Mode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.invoice_Date)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.invoice_Date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Due_Date)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Due_Date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Created_Date)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Created_Date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblAccount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblAccount.Address)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Customer.CustomerCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.tblCompany)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.tblCompany.CompanyrCode)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.invoiceId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

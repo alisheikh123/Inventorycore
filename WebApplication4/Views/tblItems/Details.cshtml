@@ -1,0 +1,54 @@
+﻿@model Inventory_Management_Systems.Models.tblItem
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblItem</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ItemCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.itemName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.itemName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.purchase_Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.purchase_Price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.sale_Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.sale_Price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.category)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.category.catName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Unit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Unit.unitName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.itemId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

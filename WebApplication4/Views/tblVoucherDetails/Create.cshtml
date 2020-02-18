@@ -1,0 +1,47 @@
+﻿@model Inventory_Management_Systems.Models.tblVoucherDetail
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>tblVoucherDetail</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="voucherId" class="control-label"></label>
+                <select asp-for="voucherId" class ="form-control" asp-items="ViewBag.voucherId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Narration" class="control-label"></label>
+                <input asp-for="Narration" class="form-control" />
+                <span asp-validation-for="Narration" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="debitAmount" class="control-label"></label>
+                <input asp-for="debitAmount" class="form-control" />
+                <span asp-validation-for="debitAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="creditAmount" class="control-label"></label>
+                <input asp-for="creditAmount" class="form-control" />
+                <span asp-validation-for="creditAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

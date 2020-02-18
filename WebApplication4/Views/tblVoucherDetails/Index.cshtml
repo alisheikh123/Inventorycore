@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Inventory_Management_Systems.Models.tblVoucherDetail>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Narration)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.debitAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.creditAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TblVoucher)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Narration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.debitAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.creditAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TblVoucher.voucherCode)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.voucherdetailId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.voucherdetailId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.voucherdetailId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
